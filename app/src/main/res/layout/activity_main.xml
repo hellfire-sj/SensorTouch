@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hellfire.user.sensortouch.MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="233dp"
+        android:layout_height="48dp"
+        android:text="Click to test your Sensor!"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+
+    <Button
+        android:id="@+id/accelerometer"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:onClick="onClickAcc"
+        android:text="Accelerometer"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/gravity"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickGrav"
+        android:text="Compass"
+        app:layout_constraintBottom_toTopOf="@+id/proximity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometer" />
+
+    <Button
+        android:id="@+id/proximity"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickProx"
+        android:text="Proximity Sensor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gravity" />
+
+</android.support.constraint.ConstraintLayout>
